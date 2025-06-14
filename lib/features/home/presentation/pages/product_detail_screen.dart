@@ -45,7 +45,6 @@ class ProductDetailScreen extends StatelessWidget {
                           product.images?.map((e) => e.image ?? "").toList(),
                     ),
                   ),
-
                   Padding(
                     padding: EdgeInsets.all(16.w),
                     child: Column(
@@ -58,24 +57,19 @@ class ProductDetailScreen extends StatelessWidget {
                           overflow: TextOverflow.ellipsis,
                         ),
                         8.height,
-
                         PriceSection(product: product),
-
                         if (product.qty != null) ...[
                           8.height,
                           StockStatus(product: product),
                         ],
-
                         if (product.color != null) ...[
                           16.height,
                           ColorSection(product: product),
                         ],
-
                         if (product.attributes?.isNotEmpty == true) ...[
                           16.height,
                           AttributesSection(product: product),
                         ],
-
                         if (product.descriptionUz?.isNotEmpty == true) ...[
                           16.height,
                           Text("Tavsif", style: context.styles.s16w600),
@@ -86,7 +80,6 @@ class ProductDetailScreen extends StatelessWidget {
                             textAlign: TextAlign.justify,
                           ),
                         ],
-
                         20.height,
                       ],
                     ),
@@ -95,7 +88,6 @@ class ProductDetailScreen extends StatelessWidget {
               ),
             ),
           ),
-
           Container(
             padding: EdgeInsets.all(16.w),
             decoration: BoxDecoration(
@@ -112,7 +104,7 @@ class ProductDetailScreen extends StatelessWidget {
               onTap: () {
                 showTopSnackBar(
                   Overlay.of(context),
-                  CustomSnackBar.success(message: "SAVATGA QOSHILDI"),
+                  const CustomSnackBar.success(message: "SAVATGA QOSHILDI"),
                 );
               },
               child: Text(

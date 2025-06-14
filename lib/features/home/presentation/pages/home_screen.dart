@@ -24,12 +24,11 @@ class HomeScreen extends StatelessWidget {
           borderRadius: BorderRadius.vertical(bottom: Radius.circular(24.w)),
         ),
       ),
-
       body: SingleChildScrollView(
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            SizedBox(
+            const SizedBox(
               height: 200,
               child: CaruselW(
                 images: [
@@ -97,7 +96,7 @@ class HomeScreen extends StatelessWidget {
                       child: Column(
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
-                          Icon(
+                          const Icon(
                             Icons.info_outline,
                             size: 48,
                             color: Colors.grey,
@@ -125,10 +124,9 @@ class HomeScreen extends StatelessWidget {
                           Navigator.push(
                             context,
                             MaterialPageRoute(
-                              builder:
-                                  (context) => ProductDetailScreen(
-                                    product: state.productsModel.data![index],
-                                  ),
+                              builder: (context) => ProductDetailScreen(
+                                product: state.productsModel.data![index],
+                              ),
                             ),
                           );
                         },
@@ -144,7 +142,7 @@ class HomeScreen extends StatelessWidget {
                     child: Column(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
-                        Icon(Icons.error_outline, size: 48, color: Colors.red),
+                        const Icon(Icons.error_outline, size: 48, color: Colors.red),
                         8.height,
                         Text(
                           "Xatolik yuz berdi",
@@ -166,8 +164,8 @@ class HomeScreen extends StatelessWidget {
                             // Qayta urinish
                             context.read<ProductsBloc>().add(event);
                           },
-                          icon: Icon(Icons.refresh),
-                          label: Text("Qayta urinish"),
+                          icon: const Icon(Icons.refresh),
+                          label: const Text("Qayta urinish"),
                         ),
                       ],
                     ),

@@ -29,10 +29,9 @@ class WCachedImage extends StatelessWidget {
       width: width,
       height: height,
       fit: fit,
-      placeholder:
-          (context, url) => Center(
-            child: CupertinoActivityIndicator(color: context.colors.primary),
-          ),
+      placeholder: (context, url) => Center(
+        child: CupertinoActivityIndicator(color: context.colors.primary),
+      ),
       errorWidget: (context, url, error) {
         log("Image Error: $error");
         return SizedBox(
@@ -43,7 +42,7 @@ class WCachedImage extends StatelessWidget {
               borderRadius: borderRadius,
               color: context.colors.grey300,
             ),
-            child: Icon(Icons.error, color: Colors.white),
+            child: const Icon(Icons.error, color: Colors.white),
           ),
         );
       },

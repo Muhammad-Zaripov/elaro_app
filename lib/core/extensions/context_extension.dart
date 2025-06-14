@@ -4,7 +4,6 @@ import '../constants/app_colors.dart';
 import '../constants/app_text_style.dart';
 
 extension BuildContextE on BuildContext {
-  AppColors get colors => AppColors();
+  AppColors get colors => const AppColors();
   AppTextStyles get styles => AppTextStyles.defaultStyle;
-
 }

@@ -3,7 +3,6 @@ import 'package:eloro_app_for_home_work/features/cart/data/datasource/cart_local
 import 'package:eloro_app_for_home_work/features/cart/presentation/blocs/bloc/cart_bloc.dart';
 import 'package:eloro_app_for_home_work/features/home/presentation/blocs/products_bloc/products_bloc.dart';
 import 'package:get_it/get_it.dart';
-
 import '../../features/cart/data/repository/cart_repository.dart';
 import '../../features/home/data/datasource/home_datasource.dart';
 import '../../features/home/data/repository/home_repository.dart';

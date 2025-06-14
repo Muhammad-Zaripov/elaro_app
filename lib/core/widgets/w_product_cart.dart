@@ -20,7 +20,6 @@ class WProductCart extends StatelessWidget {
         children: [
           WRounderContainer(
             clip: Clip.hardEdge,
-
             color: context.colors.grey200,
             boxShadow: [
               BoxShadow(
@@ -36,16 +35,16 @@ class WProductCart extends StatelessWidget {
                   children: [
                     product.discountType != null
                         ? WRounderContainer(
-                          color: context.colors.error,
-                          borderRadius: 4.w,
-                          padding: EdgeInsets.all(4.w),
-                          child: Text(
-                            product.discountType ?? "",
-                            style: context.styles.s12w500.copyWith(
-                              color: context.colors.white,
+                            color: context.colors.error,
+                            borderRadius: 4.w,
+                            padding: EdgeInsets.all(4.w),
+                            child: Text(
+                              product.discountType ?? "",
+                              style: context.styles.s12w500.copyWith(
+                                color: context.colors.white,
+                              ),
                             ),
-                          ),
-                        )
+                          )
                         : SizedBox.shrink(),
                     IconButton.filled(
                       style: IconButton.styleFrom(
@@ -59,10 +58,8 @@ class WProductCart extends StatelessWidget {
                     ).paddingSymmetric(horizontal: 10.o),
                   ],
                 ),
-
                 WCachedImage(
                   height: 90.h,
-
                   imageUrl: product.images?[0].image ?? "",
                 ).paddingAll(24.w),
               ],
@@ -78,15 +75,16 @@ class WProductCart extends StatelessWidget {
             padding: EdgeInsets.all(5.w),
             child: Text(
               "${product.discountedPrice} so'm",
-
               style: context.styles.s12w500,
             ),
           ),
-
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-              Text("${product.price} so'm", style: context.styles.s16w500),
+              SizedBox(
+                  width: 100,
+                  child: Text("${product.price} so'm",
+                      style: context.styles.s16w500)),
               6.width,
               DecoratedBox(
                 decoration: BoxDecoration(

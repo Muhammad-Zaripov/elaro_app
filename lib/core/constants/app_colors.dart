@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 
 class AppColors {
-  // Instance fields - non-static
   const AppColors();
 
   static const AppColors _instance = AppColors();

@@ -16,9 +16,9 @@ class _MainScreenState extends State<MainScreen> {
   int _selectedIndex = 0;
 
   final List<Widget> _pages = [
-    HomeScreen(),
+    const HomeScreen(),
     Container(color: Colors.amber),
-    CartScreen(),
+    const CartScreen(),
     Container(color: Colors.red),
     Container(color: Colors.blueGrey),
   ];
@@ -38,13 +38,11 @@ class _MainScreenState extends State<MainScreen> {
         switchOutCurve: Curves.bounceInOut,
         child: _pages[_selectedIndex],
       ),
-
       bottomNavigationBar: Theme(
         data: Theme.of(context).copyWith(
           bottomNavigationBarTheme: BottomNavigationBarThemeData(
             backgroundColor: context.colors.grey200,
             unselectedItemColor: context.colors.grey400,
-
             selectedLabelStyle: context.styles.s14w500,
             showUnselectedLabels: true,
             selectedItemColor: context.colors.textPrimary.withAlpha(200),
@@ -53,7 +51,6 @@ class _MainScreenState extends State<MainScreen> {
           highlightColor: Colors.transparent,
           // splashFactory: InkRipple.splashFactory,
         ),
-
         child: BottomNavigationBar(
           currentIndex: _selectedIndex,
           onTap: _onItemTapped,
